@@ -60,102 +60,163 @@
 
 
     <nav class="bg-gray-10">
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <!-- Mobile menu button-->
-                <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <!--
-                      Icon when menu is closed.
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                          Icon when menu is closed.
 
-                      Menu open: "hidden", Menu closed: "block"
-                    -->
-                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                    <!--
-                      Icon when menu is open.
+                          Menu open: "hidden", Menu closed: "block"
+                        -->
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                        </svg>
+                        <!--
+                          Icon when menu is open.
 
-                      Menu open: "block", Menu closed: "hidden"
-                    -->
-                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div class="flex flex-shrink-0 items-center">
-                    <img class="block h-8 w-auto lg:hidden" src="/static/rvg.gif?color=indigo&shade=500" alt="Recreatief Vliegveld Grimbergen">
-                    <img class="hidden h-8 w-auto lg:block" src="/static/rvg.gif?color=indigo&shade=500" alt="Recreatief Vliegveld Grimbergen">
+                          Menu open: "block", Menu closed: "hidden"
+                        -->
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
                 </div>
-                <div class="hidden sm:ml-6 sm:block">
-                    <div class="flex space-x-4">
-                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="/index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">RVG</a>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="block h-8 w-auto lg:hidden" src="/static/rvg.gif?color=indigo&shade=500"
+                             alt="Recreatief Vliegveld Grimbergen">
+                        <img class="hidden h-8 w-auto lg:block" src="/static/rvg.gif?color=indigo&shade=500"
+                             alt="Recreatief Vliegveld Grimbergen">
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a href="/index.html"
+                               class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                               aria-current="page">RVG</a>
 
-                        <a href="/pilot.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Pilot Info</a>
+                            <a href="/pilot.html"
+                               class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Pilot
+                                Info</a>
 
-                        <a href="/history.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Geschiedenis</a>
+                            <a href="/history.html"
+                               class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Geschiedenis</a>
 
-                        <a href="/fees.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Tarieven</a>
+                            <a href="/fees.html"
+                               class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Tarieven</a>
 
-                        <a href="/contact.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                            <a href="/contact.html"
+                               class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <a href="/webcam.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
-                <img class="block h-8 w-auto lg:hidden" src="/static/video-camera.png?color=indigo&shade=500" alt="Webcam">
-                <img class="hidden h-8 w-auto lg:block" src="/static/video-camera.png?color=indigo&shade=500" alt="Webcam">
-                </a>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <a href="/webcam.html"
+                       class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                        <img class="block h-8 w-auto lg:hidden" src="/static/video-camera.png?color=indigo&shade=500"
+                             alt="Webcam">
+                        <img class="hidden h-8 w-auto lg:block" src="/static/video-camera.png?color=indigo&shade=500"
+                             alt="Webcam">
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pt-2 pb-3">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="/index.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">RVG</a>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="/index.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+                   aria-current="page">RVG</a>
 
-            <a href="/pilot.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Pilot Info</a>
+                <a href="/pilot.html"
+                   class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Pilot
+                    Info</a>
 
-            <a href="/history.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Geschiedenis</a>
+                <a href="/history.html"
+                   class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Geschiedenis</a>
 
-            <a href="/fees.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Tarieven</a>
+                <a href="/fees.html"
+                   class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Tarieven</a>
 
-            <a href="/contact.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
+                <a href="/contact.html"
+                   class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
 
-            <a href="/webcam.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Webcam</a>
+                <a href="/webcam.html"
+                   class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Webcam</a>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 </header>
 
 <main>
-<section class="">
-    <div class="">
-        <img src="/static/home.jpeg" alt="RVG" />
-    </div>
-</section>
+    <section class="">
+        <div class="">
+            <img src="/static/home.jpeg" alt="RVG"/>
+        </div>
+    </section>
     <section class="flex flex-col items-center py-6">
         <div class="flex flex-col gap-8">
             <div class="flex flex-col items-center">
-                <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-gray-800 whitespace-nowrap">Our Aeroclubs</h1>
-                <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Those are club's where you can hang out with other fellow aviator's and learn to fly</p>
+                <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-gray-800 whitespace-nowrap">
+                    Onze vrienden :</h1>
+                <h2 class="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-3xl dark:text-gray-800 whitespace-nowrap">
+                    Onze aeroclubs</h2>
+                <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Dat
+                    zijn plaatse waar je andere pilooten kan ontmoeten om een goe moment te hebben. Je kunt daar ook
+                    leren vliegen</p>
             </div>
             <div class="flex gap-4 justify-center">
-                <a href="https://www.sabena-aeroclub.be" class="relative duration-300 cursor-pointer grayscale hover:grayscale-0 rounded-lg overflow-hidden h-48 w-auto">
+                <a href="https://www.sabena-aeroclub.be"
+                   class="relative duration-300 cursor-pointer grayscale hover:grayscale-0 rounded-lg overflow-hidden h-48 w-auto">
                     <img class="object-center w-full h-full" src="/static/sabena-aeroclub.jpg" alt="Sabena Aeroclub">
                     <p class="absolute px-4 text-lg text-white bottom-6">
                         <span>Sabena Aeroclub</span>
                     </p>
                 </a>
-                <a href="https://www.vliegclub-grimbergen.be/" class="relative duration-300 cursor-pointer grayscale hover:grayscale-0 rounded-lg overflow-hidden h-48 w-auto">
-                    <img class="object-center w-full h-full" src="/static/vliegclub-grimbergen.jpg" alt="Vliegclub Grimbergen VZW">
+                <a href="https://www.vliegclub-grimbergen.be/"
+                   class="relative duration-300 cursor-pointer grayscale hover:grayscale-0 rounded-lg overflow-hidden h-48 w-auto">
+                    <img class="object-center w-full h-full" src="/static/vliegclub-grimbergen.jpg"
+                         alt="Vliegclub Grimbergen VZW">
                     <p class="absolute px-4 text-lg text-white bottom-6">
                         <span>Vliegclub Grimbergen VZW</span>
+                    </p>
+                </a>
+            </div>
+            <div class="flex flex-col items-center">
+                <h2 class="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-3xl dark:text-gray-800 whitespace-nowrap">
+                    Onze Restaurant</h2>
+            </div>
+            <div class="flex gap-4 justify-center">
+                <a href="https://www.facebook.com/T-Vliegveld-60257537368/"
+                   class="relative duration-300 cursor-pointer grayscale hover:grayscale-0 rounded-lg overflow-hidden h-48 w-auto">
+                    <img class="object-center w-full h-full" src="/static/tvliegveld.jpg" alt="T'Vliegveld">
+                    <p class="absolute px-4 text-lg text-white bottom-6">
+                        <span>'T vliegveld</span>
+                    </p>
+                </a>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <h2 class="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-3xl dark:text-gray-800 whitespace-nowrap">
+                    Onze Onderhoudcentrum</h2>
+            </div>
+
+            <div class="flex gap-4 justify-center">
+                <a href="#"
+                   class="relative duration-300 cursor-pointer grayscale hover:grayscale-0 rounded-lg overflow-hidden h-48 w-auto">
+                    <img class="object-center w-full h-full" src="/static/eurosky.jpg"
+                         alt="Eurosky Photo Jean-Pierre Decock">
+                    <p class="absolute px-4 text-lg text-white bottom-6">
+                        <span>Euro-Sky</span>
                     </p>
                 </a>
             </div>
