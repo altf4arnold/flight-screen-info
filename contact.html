@@ -1,85 +1,158 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="/static/rvg.ico">
-  <link rel="stylesheet" href="mystyle.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Contact</title>
+    <meta charset="UTF-8">
+    <link href="/static/rvg.ico" rel="icon" type="image/x-icon">
+    <link href="mystyle.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact</title>
 </head>
 <body>
-<nav class="bg-gray-10">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="relative flex h-16 items-center justify-between">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!--
-            Icon when menu is closed.
-
-            Menu open: "hidden", Menu closed: "block"
-          -->
-          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-          <!--
-            Icon when menu is open.
-
-            Menu open: "block", Menu closed: "hidden"
-          -->
-          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-        <div class="flex flex-shrink-0 items-center">
-          <img class="block h-8 w-auto lg:hidden" src="/static/rvg.gif?color=indigo&shade=500" alt="Recreatief Vliegveld Grimbergen">
-          <img class="hidden h-8 w-auto lg:block" src="/static/rvg.gif?color=indigo&shade=500" alt="Recreatief Vliegveld Grimbergen">
+<header>
+    <div class="hidden relative  overflow-hidden justify-center border-b border-gray-300 md:flex">
+        <svg aria-hidden="true"
+             class="absolute top-1/2 left-[max(-7rem,calc(50%-52rem))] -z-10 w-[36.0625rem] -translate-y-1/2 transform-gpu blur-2xl"
+             viewBox="0 0 577 310">
+            <path d="m142.787 168.697-75.331 62.132L.016 88.702l142.771 79.995 135.671-111.9c-16.495 64.083-23.088 173.257 82.496 97.291C492.935 59.13 494.936-54.366 549.339 30.385c43.523 67.8 24.892 159.548 10.136 196.946l-128.493-95.28-36.628 177.599-251.567-140.953Z"
+                  fill="url(#49a52b64-16c6-4eb9-931b-8e24bf34e053)" fill-opacity=".4"
+                  id="1d77c128-3ec1-4660-a7f6-26c7006705ad"/>
+            <defs>
+                <linearGradient gradientUnits="userSpaceOnUse" id="49a52b64-16c6-4eb9-931b-8e24bf34e053" x1="614.778"
+                                x2="-42.453" y1="26.617" y2="96.115">
+                    <stop stop-color="#fcd34d"/>
+                    <stop offset="1" stop-color="#ea580c"/>
+                </linearGradient>
+            </defs>
+        </svg>
+        <svg aria-hidden="true"
+             class="absolute top-1/2 left-[max(45rem,calc(50%+8rem))] -z-10 w-[36.0625rem] -translate-y-1/2 transform-gpu blur-2xl"
+             viewBox="0 0 577 310">
+            <use href="#1d77c128-3ec1-4660-a7f6-26c7006705ad"/>
+        </svg>
+        <div class="flex h-12 gap-16">
+            <div class="flex items-center justify-center gap-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="font-semibold"><span class="tracking-wide">Frequency: </span>119.505 MHz</p>
+            </div>
+            <div class="flex items-center justify-center gap-2">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="font-semibold"><span class="tracking-wide">Phone: </span>+32 2 253 70 70 / +32 475 70 93 81
+                </p>
+            </div>
+            <div class="flex items-center justify-center gap-2">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="font-semibold"><span class="tracking-wide">Mail: </span>info@rvg.be</p>
+            </div>
         </div>
-        <div class="hidden sm:ml-6 sm:block">
-          <div class="flex space-x-4">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="/index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">RVG</a>
+    </div>
 
-            <a href="/pilot.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Pilot Info</a>
+    <nav class="bg-gray-10">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button aria-controls="mobile-menu" aria-expanded="false"
+                            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            type="button">
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                          Icon when menu is closed.
 
-            <a href="/history.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Geschiedenis</a>
+                          Menu open: "hidden", Menu closed: "block"
+                        -->
+                        <svg aria-hidden="true" class="block h-6 w-6" fill="none" stroke="currentColor"
+                             stroke-width="1.5" viewBox="0 0 24 24">
+                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                        <!--
+                          Icon when menu is open.
 
-            <a href="/fees.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Tarieven</a>
+                          Menu open: "block", Menu closed: "hidden"
+                        -->
+                        <svg aria-hidden="true" class="hidden h-6 w-6" fill="none" stroke="currentColor"
+                             stroke-width="1.5" viewBox="0 0 24 24">
+                            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <img alt="Recreatief Vliegveld Grimbergen" class="block h-8 w-auto lg:hidden"
+                             src="/static/rvg.gif?color=indigo&shade=500">
+                        <img alt="Recreatief Vliegveld Grimbergen" class="hidden h-8 w-auto lg:block"
+                             src="/static/rvg.gif?color=indigo&shade=500">
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                               href="/index.html">RVG</a>
 
-            <a href="/contact.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Contact</a>
-          </div>
+                            <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                               href="/pilot.html">Pilot Info</a>
+
+                            <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                               href="/history.html">Geschiedenis</a>
+
+                            <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                               href="/fees.html">Tarieven</a>
+
+                            <a aria-current="page"
+                               class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                               href="/contact.html">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                       href="/webcam.html">
+                        <img alt="Webcam" class="block h-8 w-auto lg:hidden"
+                             src="/static/video-camera.png?color=indigo&shade=500">
+                        <img alt="Webcam" class="hidden h-8 w-auto lg:block"
+                             src="/static/video-camera.png?color=indigo&shade=500">
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        <a href="/webcam.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
-          <img class="block h-8 w-auto lg:hidden" src="/static/video-camera.png?color=indigo&shade=500" alt="Webcam">
-          <img class="hidden h-8 w-auto lg:block" src="/static/video-camera.png?color=indigo&shade=500" alt="Webcam">
-        </a>
-      </div>
-    </div>
-  </div>
 
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden" id="mobile-menu">
-    <div class="space-y-1 px-2 pt-2 pb-3">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a href="/index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">RVG</a>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                   href="/index.html">RVG</a>
 
-      <a href="/pilot.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Pilot Info</a>
+                <a class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                   href="/pilot.html">Pilot Info</a>
 
-      <a href="/history.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Geschiedenis</a>
+                <a class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                   href="/history.html">Geschiedenis</a>
 
-      <a href="/fees.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Tarieven</a>
+                <a class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                   href="/fees.html">Tarieven</a>
 
-      <a href="/contact.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Contact</a>
+                <a aria-current="page" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+                   href="/contact.html">Contact</a>
 
-      <a href="/webcam.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Webcam</a>
-    </div>
-  </div>
-</nav>
+                <a class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                   href="/webcam.html">Webcam</a>
+            </div>
+        </div>
+    </nav>
+</header>
 
 
 </body>
