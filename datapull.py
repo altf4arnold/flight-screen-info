@@ -6,7 +6,7 @@ import requests
 
 apiUrl = "https://aeroapi.flightaware.com/aeroapi/"
 
-airport = 'EBBR'
+airport = config.AIRPORT
 payload = {'max_pages': 2}
 auth_header = {'x-apikey':config.FLIGHTAWAREKEY}
 
