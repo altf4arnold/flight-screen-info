@@ -8,10 +8,10 @@ apiUrl = "https://aeroapi.flightaware.com/aeroapi/"
 
 airport = config.AIRPORT
 payload = {'max_pages': 2}
-auth_header = {'x-apikey':config.FLIGHTAWAREKEY}
+auth_header = {'x-apikey': config.FLIGHTAWAREKEY}
 
-response = requests.get(apiUrl + f"airports/{airport}/flights/scheduled_departures",
-    params=payload, headers=auth_header)
+response = requests.get(apiUrl + f"airports/{airport}/flights/scheduled_departures", params=payload,
+                        headers=auth_header)
 print("Flight  Operator   Time    Destination              acft-type")
 if response.status_code == 200:
     departures = response.json()["scheduled_departures"]
@@ -33,8 +33,6 @@ if response.status_code == 200:
         if flight["aircraft_type"] is not None:
             acfttype = flight["aircraft_type"]
 
-
         print(name + "  " + operator + " " + scheduled_off + " " + destination + " " + acfttype)
 else:
     print("Error executing request")
-
