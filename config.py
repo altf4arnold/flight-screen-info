@@ -1,0 +1,1 @@
+FLIGHTAWAREKEY = "V3rYs3cr3t"
