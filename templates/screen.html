@@ -3,36 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>{{ airport }} Departure Schedule</title>
+    <title>{{ airport["icao"] }} Departure Schedule</title>
 </head>
 <body>
-<table>
-    <tr>
-        <th>Flight</th>
-        <th>Time</th>
-        <th>Delay</th>
-        <th>Airline</th>
-        <th>Destination</th>
-        <th>Remarks</th>
-    </tr>
-    {% for flight in data %}
+<nav class="px-4 flex justify-between bg-yellow-400 h-16">
+    <ul class="flex items-center">
+        <li>
+            <h1 class="pl-8 lg:pl-0 text-white text-2xl">{{ airport["name"] }} Airport Departures</h1>
+        </li>
+    </ul>
+    <ul class="flex items-center">
+        <li class="h-14 w-14">
+            <img
+                    class="fill-current h-14 w-14"
+                    src="/static/logo.png"
+                    alt="Skyscreen Logo"/>
+        </li>
+    </ul>
+</nav>
+<div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+        <thead class="text-xs text-gray-700 uppercase bg-yellow-400">
         <tr>
-            <td>{{ flight["ident"] }}</td>
-            <td>{{ flight["scheduled_off"] }}</td>
-            <td>{% if flight["departure_delay"] %}
-                {{ flight["departure_delay"] }}
+            <th scope="col" class="px-6 py-3">Flight</th>
+            <th scope="col" class="px-6 py-3">Time</th>
+            <th scope="col" class="px-6 py-3">Delay</th>
+            <th scope="col" class="px-6 py-3">Airline</th>
+            <th scope="col" class="px-6 py-3">Destination</th>
+            <th scope="col" class="px-6 py-3">Remarks</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i  in range(0,len) %}
+            {% if i%2 == 0 %}
+                <tr class="bg-white border-b">
+                    {% else %}
+                <tr class="bg-gray-100 border-b">
+            {% endif %}
+        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ flight[i]["ident"] }}</td>
+        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ flight[i]["scheduled_off"] }}</td>
+        <td class="px-6 py-4 font-medium text-red-600 whitespace-nowrap">{% if flight[i]["departure_delay"] %}
+            {{ flight[i]["departure_delay"] }}
+        {% else %}
+        {% endif %}
+        </td>
+        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ flight[i]["operator"] }}</td>
+        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap overflow-scroll scroll-smooth">
+            {% if flight[i]["destination"]["name"] %}
+                {{ flight[i]["destination"]["name"] }}
+                <span class="text-blue-500">{{ flight[i]["destination"]["code_icao"] }}</span> /
+                <span class="text-green-600">{{ flight[i]["destination"]["code_iata"] }}</span>
             {% else %}
             {% endif %}
-            </td>
-            <td>{{ flight["operator"] }}</td>
-            <td>{{ flight["destination"]["name"] }}</td>
-            <td>{% if flight["status"] != "Scheduled" %}
-                {{ flight["status"] }}
-                {% else %}
-                {% endif %}
-            </td>
+        </td>
+        <td class="px-6 py-4 font-medium text-amber-400 whitespace-nowrap">
+            {% if flight[i]["status"] != "Scheduled" %}
+                {{ flight[i]["status"] }}
+            {% else %}
+            {% endif %}
+        </td>
         </tr>
-    {% endfor %}
-</table>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
