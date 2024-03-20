@@ -15,14 +15,22 @@
         <th>Destination</th>
         <th>Remarks</th>
     </tr>
-    {% for flight in data%}
+    {% for flight in data %}
         <tr>
-        <td>{{ flight["ident"] }}</td>
-        <td>{{ flight["scheduled_off"] }}</td>
-        <td>{{ flight["departure_delay"] }}</td>
-        <td>{{ flight["operator"] }}</td>
-        <td>{{ flight["destination"]["name"] }}</td>
-        <td>{{ flight["status"] }}</td>
+            <td>{{ flight["ident"] }}</td>
+            <td>{{ flight["scheduled_off"] }}</td>
+            <td>{% if flight["departure_delay"] %}
+                {{ flight["departure_delay"] }}
+            {% else %}
+            {% endif %}
+            </td>
+            <td>{{ flight["operator"] }}</td>
+            <td>{{ flight["destination"]["name"] }}</td>
+            <td>{% if flight["status"] != "Scheduled" %}
+                {{ flight["status"] }}
+                {% else %}
+                {% endif %}
+            </td>
         </tr>
     {% endfor %}
 </table>
