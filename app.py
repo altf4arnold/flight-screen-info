@@ -7,6 +7,8 @@ from flask import Flask, render_template
 from config import AIRPORT as airport
 
 app = Flask(__name__)
+
+
 @app.route("/")
 def hello_world():
     rawdata = datapull.grabber()
