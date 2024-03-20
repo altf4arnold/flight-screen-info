@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>{{ airport }} Departure Schedule</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Flight</th>
+        <th>Time</th>
+        <th>Delay</th>
+        <th>Airline</th>
+        <th>Destination</th>
+        <th>Remarks</th>
+    </tr>
+    {% for flight in data%}
+        <tr>
+        <td>{{ flight["ident"] }}</td>
+        <td>{{ flight["scheduled_off"] }}</td>
+        <td>{{ flight["departure_delay"] }}</td>
+        <td>{{ flight["operator"] }}</td>
+        <td>{{ flight["destination"]["name"] }}</td>
+        <td>{{ flight["status"] }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

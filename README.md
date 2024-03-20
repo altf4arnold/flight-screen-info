@@ -7,3 +7,10 @@ Said API requires an API key. More info [here](https://www.flightaware.com/comme
 
 # Config.py :
 The example file needs to be copied as config.py. There, you can configure the API key and airport that interests you.
+
+# datapull.py :
+This file will pull the data from flightaware's server and print it on the terminal
+
+# Flask :
+To start flask, ``flask run``
+You can then go on ``https://127.0.0.1:5000``

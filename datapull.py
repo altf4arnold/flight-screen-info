@@ -5,7 +5,7 @@ import config
 import requests
 
 
-def main():
+def grabber():
     """
     Main function to pull data from flightaware API. Mostly flightaware code with overhead. Will modify if needed
     :return: raw data
@@ -27,7 +27,7 @@ def main():
 
 
 if __name__ == '__main__':
-    departures = main()
+    departures = grabber()
     name = "unknown"
     operator = "unknown"
     scheduled_off = "unknown"
