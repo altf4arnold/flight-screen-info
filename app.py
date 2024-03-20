@@ -44,7 +44,7 @@ def hello_world():
                 flight["departure_delay"] = delay.strftime(localformat)
                 if negative:
                     flight["departure_delay"] = ("-" + str(flight["departure_delay"]))
-    return render_template('screen.html', airport=airport, data=rawdata)
+    return render_template('screen.html', len=len(rawdata), airport=airport, flight=rawdata)
 
 
 @app.route("/style.css")

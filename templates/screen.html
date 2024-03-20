@@ -34,31 +34,35 @@
         </tr>
         </thead>
         <tbody>
-        {% for flight in data %}
-            <tr class="bg-white border-b">
-                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ flight["ident"] }}</td>
-                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ flight["scheduled_off"] }}</td>
-                <td class="px-6 py-4 font-medium text-red-600 whitespace-nowrap">{% if flight["departure_delay"] %}
-                    {{ flight["departure_delay"] }}
-                {% else %}
-                {% endif %}
-                </td>
-                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ flight["operator"] }}</td>
-                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap overflow-scroll scroll-smooth">
-                    {% if flight["destination"]["name"] %}
-                        {{ flight["destination"]["name"] }}
-                        <span class="text-blue-500">{{ flight["destination"]["code_icao"] }}</span> /
-                        <span class="text-green-600">{{ flight["destination"]["code_iata"] }}</span>
+        {% for i  in range(0,len) %}
+            {% if i%2 == 0 %}
+                <tr class="bg-white border-b">
                     {% else %}
-                    {% endif %}
-                </td>
-                <td class="px-6 py-4 font-medium text-amber-400 whitespace-nowrap">
-                    {% if flight["status"] != "Scheduled" %}
-                        {{ flight["status"] }}
-                    {% else %}
-                    {% endif %}
-                </td>
-            </tr>
+                <tr class="bg-gray-100 border-b">
+            {% endif %}
+        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ flight[i]["ident"] }}</td>
+        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ flight[i]["scheduled_off"] }}</td>
+        <td class="px-6 py-4 font-medium text-red-600 whitespace-nowrap">{% if flight[i]["departure_delay"] %}
+            {{ flight[i]["departure_delay"] }}
+        {% else %}
+        {% endif %}
+        </td>
+        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ flight[i]["operator"] }}</td>
+        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap overflow-scroll scroll-smooth">
+            {% if flight[i]["destination"]["name"] %}
+                {{ flight[i]["destination"]["name"] }}
+                <span class="text-blue-500">{{ flight[i]["destination"]["code_icao"] }}</span> /
+                <span class="text-green-600">{{ flight[i]["destination"]["code_iata"] }}</span>
+            {% else %}
+            {% endif %}
+        </td>
+        <td class="px-6 py-4 font-medium text-amber-400 whitespace-nowrap">
+            {% if flight[i]["status"] != "Scheduled" %}
+                {{ flight[i]["status"] }}
+            {% else %}
+            {% endif %}
+        </td>
+        </tr>
         {% endfor %}
         </tbody>
     </table>
