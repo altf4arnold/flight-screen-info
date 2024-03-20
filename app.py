@@ -14,7 +14,7 @@ app = Flask(__name__)
 def hello_world():
     localformat = "%H:%M"
     rawdata = datapull.grabber()
-    airport={"name":"","icao":"", "iata":""}
+    airport = {"name": "", "icao": "", "iata": ""}
     for flight in rawdata:
         # Source Airport naming
         airport["name"] = flight["origin"]["name"]
