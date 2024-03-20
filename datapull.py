@@ -18,7 +18,6 @@ def grabber():
 
     response = requests.get(apiUrl + f"airports/{airport}/flights/scheduled_departures", params=payload,
                             headers=auth_header)
-    print("Flight  Operator   Time    Destination              acft-type")
     if response.status_code == 200:
         departures = response.json()["scheduled_departures"]
     else:
@@ -33,6 +32,7 @@ if __name__ == '__main__':
     scheduled_off = "unknown"
     destination = "unknown"
     acfttype = "unknown"
+    print("Flight  Operator   Time    Destination              acft-type")
     for flight in departures:
         if flight["ident"] is not None:
             name = flight["ident"]
