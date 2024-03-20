@@ -13,7 +13,7 @@ def grabber():
     departures = []
     apiUrl = "https://aeroapi.flightaware.com/aeroapi/"
     airport = config.AIRPORT
-    payload = {'max_pages': 2}
+    payload = {'max_pages': config.PAGES}
     auth_header = {'x-apikey': config.FLIGHTAWAREKEY}
 
     response = requests.get(apiUrl + f"airports/{airport}/flights/scheduled_departures", params=payload,
@@ -22,6 +22,12 @@ def grabber():
         departures = response.json()["scheduled_departures"]
     else:
         print("Error executing request")
+
+    # These are for debug. Should be commented in production
+    """
+    for flight in departures:
+        print(flight)
+    """
     return departures
 
 
