@@ -56,10 +56,19 @@
             {% else %}
             {% endif %}
         </td>
-        <td class="px-6 py-4 font-medium text-amber-400 whitespace-nowrap">
             {% if flight[i]["status"] != "Scheduled" %}
-                {{ flight[i]["status"] }}
+                {% if flight[i]["cancelled"] %}
+                    <td class="px-6 py-4 font-medium text-red-600 whitespace-nowrap">
+                    {{ flight[i]["status"] }}
+                    {% elif flight[i]["blocked"] %}
+                    <td class="px-6 py-4 font-medium text-red-600 whitespace-nowrap">
+                    {{ flight[i]["status"] }}
+                    {% else %}
+                    <td class="px-6 py-4 font-medium text-amber-400 whitespace-nowrap">
+                    {{ flight[i]["status"] }}
+                    {% endif %}
             {% else %}
+                <td class="px-6 py-4 font-medium text-amber-400 whitespace-nowrap">
             {% endif %}
         </td>
         </tr>
