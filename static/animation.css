@@ -13,7 +13,7 @@
     margin: 0;
     position: absolute;
     top: 0;
-    transition: top 0.5s ease-in-out;
+    transition: top 1s ease-in-out;
 }
 
 /* Style for individual items in the carousel */
