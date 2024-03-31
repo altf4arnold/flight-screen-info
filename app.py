@@ -16,12 +16,12 @@ def hello_world():
     rawdata = datapull.grabber()
     airport = {"name": "", "icao": "", "iata": ""}
     for flight in rawdata:
-        # Source Airport naming
+        # Source Airport naming :
         airport["name"] = flight["origin"]["name"]
         airport["icao"] = flight["origin"]["code_icao"]
         airport["iata"] = flight["origin"]["code_iata"]
 
-        # Converting departures time from UTC to local time
+        # Converting departures time from UTC to local time :
         origintimezone = flight["origin"]["timezone"]
         from_zone = tz.gettz('UTC')
         to_zone = tz.gettz(origintimezone)
@@ -29,7 +29,13 @@ def hello_world():
         utctime = utctime.replace(tzinfo=from_zone)
         flight["scheduled_off"] = utctime.astimezone(to_zone).strftime(localformat)
 
-        # Calculating Delays in human readable ways
+        # Adding the secondary flight numbers :
+        flightnr = flight["ident"]
+        flight["ident"] = []
+        flight["ident"].append(flightnr)
+        for otherrefs in flight["codeshares"]:
+            flight["ident"].append(otherrefs)
+        # Calculating Delays in human readable ways :
         negative = False
         delay = flight["departure_delay"]
         if delay != 0:
@@ -45,9 +51,3 @@ def hello_world():
                 if negative:
                     flight["departure_delay"] = ("-" + str(flight["departure_delay"]))
     return render_template('screen.html', len=len(rawdata), airport=airport, flight=rawdata)
-
-
-@app.route("/style.css")
-def style():
-    with open("static/style.css", "r") as f:
-        return f.read(), 200, {'Content-Type': 'text/css; charset=utf-8'}
