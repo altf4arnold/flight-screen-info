@@ -42,14 +42,12 @@
         <tr class="bg-gray-100 border-b">
             {% endif %}
             <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                <div class="content">
-                    <div class="content__container">
-                        <ul class="content__container__list">
-                            {% for ident in flight[i]["ident"] %}
-                            <li class="content__container__list__item">{{ ident }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+                <div class="carousel-container">
+                    <ul class="carousel-list" id="carouselList">
+                        {% for ident in flight[i]["ident"] %}
+                        <li class="carousel-item">{{ ident }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </td>
             <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ flight[i]["scheduled_off"] }}</td>
@@ -87,5 +85,6 @@
         </tbody>
     </table>
 </div>
+<script src="/static/scroll.js"></script>
 </body>
 </html>
