@@ -1,0 +1,24 @@
+/* Style for the container of the carousel */
+.carousel-container {
+    width: 70px;
+    height: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Style for the list inside the carousel */
+.carousel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    transition: top 1s ease-in-out;
+}
+
+/* Style for individual items in the carousel */
+.carousel-item {
+    height: 15px; /* Adjust height as needed */
+    line-height: 15px; /* Adjust line-height to vertically center text */
+    /*border-bottom: 1px solid #ccc; /* Optional: Add border between items */
+}
