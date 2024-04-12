@@ -22,7 +22,7 @@ click==8.1.7
     #   flask
 flask==3.0.2
     # via -r requirements.in
-idna==3.6
+idna==3.7
     # via
     #   -r requirements.in
     #   requests
