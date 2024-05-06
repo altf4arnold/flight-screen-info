@@ -53,7 +53,7 @@ urllib3==2.2.1
     # via
     #   -r requirements.in
     #   requests
-werkzeug==3.0.2
+werkzeug==3.0.3
     # via
     #   -r requirements.in
     #   flask
