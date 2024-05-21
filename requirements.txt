@@ -43,7 +43,7 @@ markupsafe==2.1.5
     #   werkzeug
 python-dateutil==2.9.0.post0
     # via -r requirements.in
-requests==2.31.0
+requests==2.32.0
     # via -r requirements.in
 six==1.16.0
     # via
